@@ -134,3 +134,118 @@ php artisan test
 ## Entrega esperada
 
 El estudiante debe trabajar sobre su propio fork del repositorio y entregar en Canvas el enlace al repositorio forkeado, junto con una breve descripción del módulo implementado y los commits principales que evidencian su avance.
+
+# Sprint 1: Análisis de arquitectura y stack tecnológico
+
+## Objetivo
+
+Analizar el repositorio base del proyecto **Hospital HIS**, verificar su ejecución local e identificar la arquitectura, frameworks y tecnologías utilizadas antes de documentar el módulo asignado.
+
+## Repositorio analizado
+
+Repositorio base proporcionado por el docente:
+
+```text
+https://github.com/rortizs/project_final_analisis_sistemas_Uno.git
+```
+
+El proyecto fue clonado y ejecutado localmente para validar su funcionamiento inicial.
+
+## Arquitectura identificada
+
+El proyecto utiliza una arquitectura **cliente-servidor**:
+
+* **Backend:** Laravel, encargado de las rutas API, controladores, migraciones y lógica del servidor.
+* **Frontend:** Vue 3 como aplicación SPA.
+* **Comunicación:** API REST bajo la ruta `/api/v1`.
+* **Autenticación:** JWT.
+* **Multitenancy:** uso de cabeceras HTTP como `X-Tenant-ID`.
+
+## Frameworks y tecnologías
+
+Stack identificado:
+
+* PHP 8.4.21
+* Laravel 12.58.0
+* Composer
+* Node.js
+* npm
+* Vue 3
+* Vite
+* SQLite para pruebas locales
+* JWT
+* API REST `/api/v1`
+
+## Configuración local
+
+Se configuró el archivo `.env` para utilizar SQLite como base de datos local. También se creó el archivo:
+
+```text
+database/database.sqlite
+```
+
+Comandos utilizados:
+
+```bash
+php artisan config:clear
+php artisan cache:clear
+php artisan migrate
+php artisan serve
+php artisan route:list
+```
+
+## Rutas verificadas
+
+Mediante el comando:
+
+```bash
+php artisan route:list
+```
+
+Se identificaron principalmente rutas de autenticación:
+
+```text
+POST      api/v1/auth/login
+POST      api/v1/auth/logout
+GET       api/v1/auth/me
+POST      api/v1/auth/refresh
+POST      api/v1/auth/register
+```
+
+También se encontraron rutas generales:
+
+```text
+GET       login
+GET       up
+GET       {any?}
+```
+
+## Hallazgos principales
+
+* El proyecto levanta correctamente en:
+
+```text
+http://127.0.0.1:8000
+```
+
+* La pantalla inicial muestra el nombre del sistema y una descripción base.
+* El repositorio funciona como estructura inicial del sistema hospitalario.
+* No se encontraron módulos funcionales completos como pacientes, alergias, camas, citas, expediente médico o laboratorio.
+
+## Módulo asignado
+
+Módulo asignado:
+
+```text
+Módulo 15: Alergias del paciente
+```
+
+Durante este sprint se verificó que aún no existen rutas, modelos, controladores ni vistas específicas para alergias del paciente. Por lo tanto, este módulo debe ser diseñado y documentado en los siguientes avances.
+
+## Decisión tomada
+
+Se utilizó SQLite para la verificación local inicial, ya que permite levantar el proyecto rápidamente sin depender de una configuración externa de MySQL.
+
+## Conclusión
+
+El Sprint 1 permitió confirmar que el proyecto base funciona correctamente en el entorno local. También se identificó que utiliza Laravel, Vue 3, API REST, JWT y una estructura inicial para un sistema hospitalario. El módulo de alergias del paciente aún no está implementado, por lo que deberá diseñarse y documentarse posteriormente.

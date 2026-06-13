@@ -1,0 +1,12 @@
+[90m= [39m[34;4mApp\Models\PatientAllergy[39;24m {#8820
+    [34mallergy_name[39m: [32m"[39m[32mPenicilina[39m[32m"[39m,
+    [34mallergy_type[39m: [32m"[39m[32mmedication[39m[32m"[39m,
+    [34mseverity[39m: [32m"[39m[32msevere[39m[32m"[39m,
+    [34mreaction[39m: [32m"[39m[32mReacción alérgica registrada[39m[32m"[39m,
+    [34mnotes[39m: [32m"[39m[32mAlergia crítica para medicamentos[39m[32m"[39m,
+    [34mactive[39m: [36mtrue[39m,
+    [34mpatient_id[39m: [35m1[39m,
+    [34mupdated_at[39m: [32m"[39m[32m2026-06-13 14:08:40[39m[32m"[39m,
+    [34mcreated_at[39m: [32m"[39m[32m2026-06-13 14:08:40[39m[32m"[39m,
+    [34mid[39m: [35m1[39m,
+  }
