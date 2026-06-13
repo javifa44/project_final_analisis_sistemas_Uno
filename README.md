@@ -249,3 +249,52 @@ Se utilizó SQLite para la verificación local inicial, ya que permite levantar 
 ## Conclusión
 
 El Sprint 1 permitió confirmar que el proyecto base funciona correctamente en el entorno local. También se identificó que utiliza Laravel, Vue 3, API REST, JWT y una estructura inicial para un sistema hospitalario. El módulo de alergias del paciente aún no está implementado, por lo que deberá diseñarse y documentarse posteriormente.
+
+## Sprint 2: Implementación del módulo Alergias del Paciente
+
+En este sprint se implementó el módulo asignado **Módulo 15: Alergias del paciente**.
+Se creó la estructura backend y frontend necesaria para consultar, registrar, editar y desactivar alergias asociadas a un paciente.
+
+Cambios principales:
+
+* Creación de modelos `Patient` y `PatientAllergy`.
+* Creación de migraciones para `patients` y `patient_allergies`.
+* Implementación del controlador `PatientAllergyController`.
+* Registro de rutas API para el módulo.
+* Creación de la pantalla Vue `PatientAllergiesPage.vue`.
+* Uso de ruta dinámica `/patients/:patientId/allergies`.
+* Visualización destacada de alergias activas mediante alerta en pantalla.
+
+Evidencia:
+
+* Rutas visibles con `php artisan route:list`.
+* Módulo funcionando en navegador.
+* Datos reflejados desde la base de datos.
+* Capturas ubicadas en `docs/screenshots/sprint-2/`.
+
+Commit principal:
+
+`Sprint 2: implement patient allergies module`
+
+---
+
+## Sprint 3: Diagramas UML y documentación final
+
+En este sprint se agregaron los diagramas UML correspondientes al módulo **Alergias del paciente** y se completó la documentación final para la entrega.
+
+Diagramas incluidos:
+
+* Diagrama de caso de uso.
+* Diagrama de clases.
+* Diagrama de secuencia.
+
+Los diagramas se encuentran en:
+
+`docs/uml/`
+
+Este sprint documenta el diseño del módulo, la relación entre paciente y alergias, y el flujo de registro de una alergia desde el frontend hasta la base de datos.
+
+Commit principal:
+
+`Sprint 3: add UML diagrams for patient allergies module`
+
